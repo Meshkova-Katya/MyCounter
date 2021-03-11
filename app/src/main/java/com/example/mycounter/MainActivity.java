@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         if (savedInstanceState != null && savedInstanceState.containsKey("counter")) {
             counter = savedInstanceState.getInt("counter");
-            vvv();
+            findId();
         }
     }
 
@@ -37,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     public void onClickBtnAddStudents(View view) {
         counter++;
-       vvv();
+        findId();
     }
 
     @SuppressLint("SetTextI18n")
-    public void vvv() {
+    public void findId() {
         TextView counterView = (TextView) findViewById(R.id.txt_counter);
         counterView.setText(" " + counter.toString() + " ");
     }
